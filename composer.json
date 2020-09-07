@@ -1,0 +1,31 @@
+{
+    "name": "cr4sec/user-channels",
+    "description": "Test task: adding the subscribed channels setting to the user",
+    "authors": [
+        {
+            "name": "Cry Security",
+            "email": "cr4sec@gmail.com",
+            "homepage": "https://github.com/crysecurity",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "illuminate/database": "^5.8|^6.0|^7.0|^8.0",
+        "illuminate/view": "^7.27"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cr4Sec\\UserChannels\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cr4Sec\\UserChannels\\ChannelsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

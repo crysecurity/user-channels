@@ -1,0 +1,65 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateChannelsTables extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     * @throws Exception
+     */
+    public function up()
+    {
+        $tables = config('cr4sec.channels.tables');
+
+        if (empty($tables)) {
+            throw new Exception('Error: config/cr4sec/channels.php not loaded. Run [php artisan config:clear] and try again.');
+        }
+
+        Schema::create($tables['channels'], static function (Blueprint $table) {
+            $table
+                ->string('id', 10)
+                ->primary()
+                ->unique();
+        });
+
+        Schema::create($tables['user_channel'], static function (Blueprint $table) use ($tables) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id');
+            $table->string('channel_id');
+            $table->timestamps();
+
+            $table
+                ->foreign('user_id')
+                ->references('id')
+                ->on($tables['users']);
+
+            $table
+                ->foreign('channel_id')
+                ->references('id')
+                ->on($tables['channels']);
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     * @throws Exception
+     */
+    public function down()
+    {
+        $tables = config('cr4sec.channels.tables');
+
+        if (empty($tableNames)) {
+            throw new Exception('Error: config/cr4sec/channels.php not found and defaults could not be merged. Please publish the package configuration before proceeding, or drop the tables manually.');
+        }
+
+        Schema::drop($tables['user_channel']);
+        Schema::drop($tables['channels']);
+    }
+}

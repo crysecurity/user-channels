@@ -1,0 +1,16 @@
+.user-channels-list-container {
+    display: inline-block;
+    padding: 10px;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75);
+    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75);
+}
+
+.user-channels-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-channels-list-item {
+    padding: 4px;
+}

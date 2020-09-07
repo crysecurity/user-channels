@@ -1,6 +1,7 @@
 {
     "name": "cr4sec/user-channels",
     "description": "Test task: adding the subscribed channels setting to the user",
+    "license": "MIT",
     "authors": [
         {
             "name": "Cry Security",

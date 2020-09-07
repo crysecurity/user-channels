@@ -1,6 +1,11 @@
 # Associate users with channels
 
-This is a test project for working with creating your own package for Laravel
+[![Total Downloads](https://poser.pugx.org/cr4sec/user-channels/downloads)](//packagist.org/packages/cr4sec/user-channels)
+[![Version](https://poser.pugx.org/cr4sec/user-channels/version)](//packagist.org/packages/cr4sec/user-channels)
+[![Dependents](https://poser.pugx.org/cr4sec/user-channels/dependents)](//packagist.org/packages/cr4sec/user-channels)
+[![License](https://poser.pugx.org/cr4sec/user-channels/license)](//packagist.org/packages/cr4sec/user-channels)
+
+<p>This is a test project for working with creating your own package for Laravel</p>
 
 ## Installation in Laravel
 

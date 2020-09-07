@@ -26,7 +26,7 @@ $ composer require cr4sec/user-channels
 $ php artisan vendor:publish --provider="Cr4Sec\UserChannels\ChannelsServiceProvider"
 ```
 
-- You should publish the migration and the config/permission.php config file with:
+- You should publish the migration and the config/cr4sec/channels.php config file with:
 
 ```bash
 $ php artisan migrate

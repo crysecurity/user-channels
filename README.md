@@ -49,8 +49,22 @@ Get user channels
 $user->channels;
 ```
 
+User's subscription to channels
+
+```php
+$user->attachChannel(['afgt6d3', 'a54dhyt']);
+$user->attachChannel('afg7');
+$user->attachChannel(Channel::first);
+```
+User's unsubscription to channels
+
+```php
+$user->channels()->detach(['afgt6d3', 'a54dhyt']);
+```
+
 Blade component
 
 ```blade
 <x-user-channels-list-component :channels="$channels"/>
 ```
+

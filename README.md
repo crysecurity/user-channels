@@ -48,3 +48,9 @@ Get user channels
 ```php
 $user->channels;
 ```
+
+Blade component
+
+```blade
+<x-user-channels-list-component :channels="$channels"/>
+```
